@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %}Hello HelloController!{% endblock %}
+{% block body %}
+ <h1>Bonjour Robin</h1>
+{% if age < 18  %}
+    <p>Vous êtes trop jeune !!!</p>
+    {% else %}
+    <p> C'est bon t'es majeur </p>
+    {% endif %}
+    {% for day in week %}
+    <li> {{day | upper}}</li>
+    </ul>
+    {% endfor %}
+{% endblock %}

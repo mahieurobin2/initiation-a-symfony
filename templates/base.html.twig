@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@0.5.3/dist/css/axentix.min.css">
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar primary">
+                <a href="{{ path('homepage') }}" class="navbar-brand">Projet debuter en symphony</a>
+                <div class="navbar-menu ml-auto">
+                    <a class="navbar-link" href="hello">Test</a>
+                    <a class="navbar-link" href="homepage">Accueil</a>
+                    <a class="navbar-link" href="login">login</a>
+                    <a class="navbar-link" href="admin">Admin</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+
+        <footer class="footer primary">
+            Copyright © 2021 - Example
+        </footer>
+
+       
+
+        <script src="https://cdn.jsdelivr.net/npm/axentix@0.5.3/dist/js/axentix.min.js"></script>
+        {% block javascripts %}{% endblock %}
+        <script src="{{ asset('js/scripts.js') }}"></script>
+    </body>
+</html>
+
+
